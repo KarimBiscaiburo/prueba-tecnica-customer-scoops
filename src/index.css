@@ -1,0 +1,23 @@
+:root {
+  /* --img-background-gradient-dark: #231331;
+  --img-background-gradient-light: #00ccbc; */
+  --img_background_gradient: linear-gradient(283.73deg, #231331 -29.4%, #00CCBC 50.02%);
+  --color_barra_progreso: #231331;
+  --transicion: .3s ease-in all;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+body {
+  width: 100%;
+}
