@@ -1,9 +1,10 @@
 :root {
-  /* --img-background-gradient-dark: #231331;
-  --img-background-gradient-light: #00ccbc; */
-  --img_background_gradient: linear-gradient(283.73deg, #231331 -29.4%, #00CCBC 50.02%);
-  --color_barra_progreso: #231331;
-  --transicion: .3s ease-in all;
+  --background_gradient: linear-gradient(283.73deg, #231331 -29.4%, #00CCBC 50.02%);
+  --color_oscuro: #231331;
+  --color_oscuro-opacidad: #23133180;
+  --color_claro: #00CCBC;
+  --color_blanco: #FFFFFF;
+  --transicion: .3s ease all;
 }
 
 * {
@@ -20,4 +21,14 @@ p {
 }
 body {
   width: 100%;
+  font-family: "K2D", serif;
+}
+
+@media (min-width: 1150px) {
+  #root {
+    height: 100%;
+  }
+  body {
+    height: 100vh;
+  }
 }

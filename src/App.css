@@ -1,4 +1,15 @@
-.page-container {
+.contenedor_pagina {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1150px) {
+  .contenedor_pagina {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "primera segunda";
+    gap: 20px;
+  }
 }
