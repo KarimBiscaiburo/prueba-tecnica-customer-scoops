@@ -1,0 +1,123 @@
+.contenido {
+    margin: 54px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    align-items: end;
+    width: 305px;
+}
+.contenido_contenedor > img {
+    display: none;
+    width: 113px;
+    margin: 54px 0;
+}
+.secciones_contenedor {
+    scroll-behavior: smooth;
+    width: 305px;
+    margin: 0 auto;
+    display: flex;
+    gap: 150px;
+}
+.seccion {
+    min-width: 305px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+.seccion > p {
+    font-size: 19px;
+}
+@media (min-width: 600px) {
+    .contenido {
+        width: 450px;
+        margin: 54px auto;
+    }
+    .seccion {
+        min-width: 400px;
+    }
+    .secciones_contenedor {
+        width: 400px;
+    }
+}
+@media (min-width: 1150px) {
+    .contenido_contenedor > img {
+        display: block;
+    }
+}
+
+.seccion.primera input {
+    border: none;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--color_oscuro-opacidad);
+    color: var(--color_oscuro);
+    outline: none;
+    font-size: 17px;
+    width: 100%;
+    transition: .3s ease all;
+}
+.seccion.primera input:focus {
+    border-bottom: 1px solid var(--color_claro);
+}
+
+
+.cargo_contenedor {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+
+.desafio_contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+@media (min-width: 600px) {
+    .desafio_contenedor {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+.desafio_contenedor button:last-of-type > p {
+    width: 100%;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.crm_contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+}
+
+/* Último elemento impar*/
+.seccion.cuarto {
+    max-width: 310px;
+}
+.crm_contenedor > button:nth-last-child(1):nth-child(odd) {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .seccion.cuarto {
+        max-width: 100%;
+    }
+    .crm_contenedor {
+        justify-content: start;
+    }
+    .crm_contenedor > button:nth-last-child(1):nth-child(odd) {
+        width: 125px;
+    }
+}
+
+.seccion.sexta > p strong {
+    font-size: 30px;
+}
+.seccion.sexta p:last-of-type {
+    font-style: italic;
+}
