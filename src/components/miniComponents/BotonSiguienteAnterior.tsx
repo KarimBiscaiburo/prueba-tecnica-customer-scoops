@@ -3,7 +3,7 @@ import BotonOscuro from "./BotonOscuro";
 import FlechaIzquierdaCirculo from "./FlechaIzquierdaCirculo";
 
 // Definir la interfaz para las props
-interface IBotonSiguienteAnteriorProps {
+interface IProps {
     texto: string;
     funcionSiguiente: () => void
     funcionAnterior: () => void
@@ -28,7 +28,7 @@ const ContenedorFlecha = styled.button`
 `
 
 
-const BotonSiguienteAnterior: React.FC<IBotonSiguienteAnteriorProps> = ({texto, funcionSiguiente, funcionAnterior}) => (
+const BotonSiguienteAnterior: React.FC<IProps> = ({texto, funcionSiguiente, funcionAnterior}) => (
     <BotonSiguienteAnteriorStyle>
         <ContenedorFlecha onClick={funcionAnterior}>
             <FlechaIzquierdaCirculo />

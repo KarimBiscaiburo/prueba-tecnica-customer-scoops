@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface IDesafiosCardProps {
+interface IProps {
     opcion: string
     texto: string
 }
@@ -53,7 +53,7 @@ const DesafioTexto = styled.p`
 `
 
 
-const DesafiosCard: React.FC<IDesafiosCardProps> = ({opcion, texto}) => (
+const DesafiosCard: React.FC<IProps> = ({opcion, texto}) => (
     <DesafiosCardStyle>
         <ContenedorOpcion>
             <LetraOpcion>{opcion}</LetraOpcion>

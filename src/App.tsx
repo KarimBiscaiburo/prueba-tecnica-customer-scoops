@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 
-import BarraProgreso from './components/BarraProgreso';
+import BarraProgreso from './components/miniComponents/BarraProgreso';
 import Portada from './components/Portada';
 import Secciones from './components/Secciones';
 

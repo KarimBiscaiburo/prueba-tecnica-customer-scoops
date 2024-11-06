@@ -7,7 +7,7 @@
     align-items: end;
     width: 305px;
 }
-.contenido_contenedor > img {
+.contenido-logo {
     display: none;
     width: 113px;
     margin: 54px 0;
@@ -42,7 +42,7 @@
     }
 }
 @media (min-width: 1150px) {
-    .contenido_contenedor > img {
+    .contenido-logo {
         display: block;
     }
 }

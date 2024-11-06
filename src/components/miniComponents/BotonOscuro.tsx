@@ -2,7 +2,7 @@ import styled from "styled-components"
 import FlechaDerecha from "./FlechaDerecha";
 
 // Definir la interfaz para las props
-interface IBotonOscuroProps {
+interface IProps {
     texto: string;
     funcion: () => void
 }
@@ -24,7 +24,7 @@ const TextoStyle = styled.p`
     font-size: 11px;
 `
 
-const BotonOscuro: React.FC<IBotonOscuroProps> = ({texto, funcion}) => (
+const BotonOscuro: React.FC<IProps> = ({texto, funcion}) => (
     <BotonOscuroStyle onClick={funcion}>
         <TextoStyle>{texto}</TextoStyle>
         <FlechaDerecha />

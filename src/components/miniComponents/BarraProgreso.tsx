@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 // Definir la interfaz para las props
-interface IBarraProgreso {
+interface IProps {
     width: string;
 }
 
-const BarraProgreso = styled.span<IBarraProgreso>`
+const BarraProgreso = styled.span<IProps>`
     position: absolute;
     top: 0;
     display: block;
