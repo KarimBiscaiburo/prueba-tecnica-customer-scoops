@@ -19,13 +19,22 @@ h1, h2, h3, h4 {
 body {
   width: 100%;
   font-family: "K2D", serif;
+  transition: .3s ease background;
 }
 
 @media (min-width: 1150px) {
   #root {
     height: 100%;
   }
+}
+@media (min-width: 600px) {
   body {
     height: 100vh;
+  }
+  body.activar-fondo {
+    background: var(--background_gradient);
+  }
+  body.activar-fondo .portada-contenedor {
+    background: transparent;
   }
 }

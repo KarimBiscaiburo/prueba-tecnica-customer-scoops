@@ -28,6 +28,7 @@ export default function Secciones({fase, cambiarFase}: IProps) {
     function siguienteSeccion() {
         if (!secciones) return;
 
+        // Mueve el slider a la siguiente etapa del formulario
         if (currentIndex < secciones.length - 1) {
             currentIndex++;
             secciones[currentIndex].scrollIntoView({ behavior: "smooth", inline: "end" });
@@ -38,6 +39,7 @@ export default function Secciones({fase, cambiarFase}: IProps) {
     function seccionAnterior() {
         if (!secciones) return;
 
+        // Mueve el slider a la etapa anterior del formulario
         if (currentIndex > 0) {
             currentIndex--;
             secciones[currentIndex].scrollIntoView({ behavior: "smooth", inline: "end" });
@@ -48,6 +50,22 @@ export default function Secciones({fase, cambiarFase}: IProps) {
     function guardarNombre(nombre: string) {
         const nombreFormateado = nombre.trim();
         setNombre(nombreFormateado);
+    }
+
+    // Función para activar el fondo de la etapa final (si esta en desktop)
+    function finFormulario() {
+        if (!secciones) return;
+
+        // Mueve el slider a la siguiente etapa del formulario
+        if (currentIndex < secciones.length - 1) {
+            currentIndex++;
+            secciones[currentIndex].scrollIntoView({ behavior: "smooth", inline: "end" });
+            cambiarFase(fase + 1);
+        }
+
+        // Agregar clase al body
+        const body = document.querySelector("body");
+        body?.classList.add("activar-fondo");
     }
     
 
@@ -66,7 +84,7 @@ export default function Secciones({fase, cambiarFase}: IProps) {
 
                     <SecCRM siguienteSeccion={siguienteSeccion} seccionAnterior={seccionAnterior} />
 
-                    <SecIndustria siguienteSeccion={siguienteSeccion} seccionAnterior={seccionAnterior} />
+                    <SecIndustria siguienteSeccion={finFormulario} seccionAnterior={seccionAnterior} />
 
                     <SecFinal />
                     

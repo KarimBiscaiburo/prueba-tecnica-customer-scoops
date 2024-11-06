@@ -17,6 +17,7 @@ const TarjetaTextoStyle = styled.button<{isSeleccionada: boolean}>`
     height: 40px;
     background-color: ${({ isSeleccionada }) => (isSeleccionada ? "var(--color_oscuro)" : "transparent")};
     cursor: pointer;
+    outline: none;
     transition: .3s ease all;
 
     @media (min-width: 600px) {
