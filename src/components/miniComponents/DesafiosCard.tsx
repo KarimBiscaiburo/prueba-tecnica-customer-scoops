@@ -3,9 +3,11 @@ import styled from "styled-components";
 interface IProps {
     opcion: string
     texto: string
+    isSeleccionada: boolean
+    onClick: () => void
 }
 
-const DesafiosCardStyle = styled.button`
+const DesafiosCardStyle = styled.button<{isSeleccionada: boolean}>`
     width: 100%;
     height: 40px;
     display: flex;
@@ -15,7 +17,9 @@ const DesafiosCardStyle = styled.button`
     border-radius: 50px;
     justify-content: start;
     align-items: center;
-    background-color: transparent;
+    cursor: pointer;
+    background-color: ${({ isSeleccionada }) => (isSeleccionada ? "var(--color_oscuro)" : "transparent")};
+    transition: .3s ease all;
 
     @media (min-width: 600px) {
         width: 180px;
@@ -47,18 +51,20 @@ const LetraOpcion = styled.p`
     color: var(--color_blanco);
 `
 
-const DesafioTexto = styled.p`
+const DesafioTexto = styled.p<{isSeleccionada: boolean}>`
+    color: ${({ isSeleccionada }) => (isSeleccionada ?  "var(--color_blanco)" : "var(--color_oscuro)")};
     text-align: start;
     font-size: 11px;
+    transition: .3s ease all;
 `
 
 
-const DesafiosCard: React.FC<IProps> = ({opcion, texto}) => (
-    <DesafiosCardStyle>
+const DesafiosCard: React.FC<IProps> = ({opcion, texto, isSeleccionada, onClick}) => (
+    <DesafiosCardStyle onClick={onClick} isSeleccionada={isSeleccionada}>
         <ContenedorOpcion>
             <LetraOpcion>{opcion}</LetraOpcion>
         </ContenedorOpcion>
-        <DesafioTexto>{texto}</DesafioTexto>
+        <DesafioTexto isSeleccionada={isSeleccionada}>{texto}</DesafioTexto>
     </DesafiosCardStyle>
 )
 
