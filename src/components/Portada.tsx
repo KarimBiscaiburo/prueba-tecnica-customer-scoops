@@ -9,7 +9,7 @@ export default function Portada( {fase}: IProps ) {
     return (
         <header className="portada-contenedor">
             <div className="portada-etapa">
-                <p>{fase}{fase + 1}</p>
+                <p>0{fase + 1}</p>
                 <span></span>
                 <p>06</p>
             </div>
