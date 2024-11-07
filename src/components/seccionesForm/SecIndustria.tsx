@@ -18,6 +18,12 @@ export default function SecIndustria({siguienteSeccion, seccionAnterior} : IProp
         // Aquí iría el código para guardar la opción seleccionada ...
     }
 
+    function validarContinuar() {
+        // Validar que haya seleccionado un cargo
+        if(!industriaSeleccionada) return;
+        siguienteSeccion();
+    }
+
     return (
         <section className="seccion">
             <p><strong>Ahora te vamos a sorprender...</strong> <br/>¿A cuál industria pertenece tu empresa?</p>
@@ -35,7 +41,7 @@ export default function SecIndustria({siguienteSeccion, seccionAnterior} : IProp
                 }
             </div>
 
-            <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={siguienteSeccion} funcionAnterior={seccionAnterior}/>
+            <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={validarContinuar} funcionAnterior={seccionAnterior}/>
         </section>
     )
 }

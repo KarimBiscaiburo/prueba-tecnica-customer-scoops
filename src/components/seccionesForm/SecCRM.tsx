@@ -18,6 +18,12 @@ export default function SecCRM({siguienteSeccion, seccionAnterior} : IProps) {
         // Aquí iría el código para guardar la opción seleccionada ...
     }
 
+    function validarContinuar() {
+        // Validar que haya seleccionado un cargo
+        if(!crmSeleccionado) return;
+        siguienteSeccion();
+    }
+
     return (
         <section className="seccion">
             <p>¿Cuál CRM están utilizando en tu empresa?<br/>CRM:</p>
@@ -35,7 +41,7 @@ export default function SecCRM({siguienteSeccion, seccionAnterior} : IProps) {
                 }
             </div>
 
-            <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={siguienteSeccion} funcionAnterior={seccionAnterior}/>
+            <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={validarContinuar} funcionAnterior={seccionAnterior}/>
         </section>
     )
 }

@@ -18,6 +18,12 @@ export default function SecCargo({siguienteSeccion, seccionAnterior, nombre} : I
         // Aquí iría el código para guardar la opción seleccionada ...
     }
 
+    function validarContinuar() {
+        // Validar que haya seleccionado un cargo
+        if(!cargoSeleccionado) return;
+        siguienteSeccion();
+    }
+
     return (
         <section className="seccion">
             <p><strong>Genial {nombre}, </strong> ahora nos gustaría tener cierta info para diseñar una gran propuesta de valor para ti:</p>
@@ -36,7 +42,7 @@ export default function SecCargo({siguienteSeccion, seccionAnterior, nombre} : I
                 }
             </div>
 
-            <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={siguienteSeccion} funcionAnterior={seccionAnterior}/>
+            <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={validarContinuar} funcionAnterior={seccionAnterior}/>
         </section>
     )
 }
