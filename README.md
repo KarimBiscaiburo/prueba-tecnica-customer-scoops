@@ -20,9 +20,17 @@ Por último, para probar el funcionamiento del envío del correo, debes ejecutar
 >[!NOTE]
 >Para evitar errores primero tenés que crearte una cuenta en [Resend](https://resend.com/), crear una API KEY, dentro de la carpeta /server agregá un documento ".env.local", en la primera línea escribir "RESEND_API_KEY=tu_api_key" y dentro de la función, reemplazar 'anthony@customerscoops.com' por tu email con el que te registraste.
 
+## Enfoque 
+
+El proyecto lo pensé como una única página responsiva donde el contenido principal es un slider, y en el cual el usuario va avanzando por las diferentes etapas. Cada etapa debe tener su validación correspondiente y, enfocado a poder implementar un estado global, dejé apartado un lugar donde se podría implementar esto.
+
 ## Estilos
 
 Metodología BEM.
+
+</br>
+
+El ícono de la página responde al tema de preferencia del usuario.
 
 </br>
 
