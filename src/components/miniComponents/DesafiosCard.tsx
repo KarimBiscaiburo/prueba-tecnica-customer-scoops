@@ -18,6 +18,7 @@ const DesafiosCardStyle = styled.button<{isSeleccionada: boolean}>`
     justify-content: start;
     align-items: center;
     cursor: pointer;
+    outline: none;
     background-color: ${({ isSeleccionada }) => (isSeleccionada ? "var(--color_oscuro)" : "transparent")};
     transition: .3s ease all;
 

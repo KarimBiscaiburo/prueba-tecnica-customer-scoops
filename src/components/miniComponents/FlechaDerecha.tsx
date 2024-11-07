@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const FlechaDerechaStyle = styled.div`
     display: none;
-    width: 9px;
+    width: 11px;
     @media (min-width: 600px) {
         display: block;
     }

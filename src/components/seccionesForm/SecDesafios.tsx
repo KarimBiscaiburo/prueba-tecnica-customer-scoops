@@ -2,6 +2,8 @@ import { useState } from "react";
 import DesafiosCard from "../miniComponents/DesafiosCard";
 import BotonSiguienteAnterior from "../miniComponents/BotonSiguienteAnterior";
 
+import "../../styles/secDesafios.css"
+
 interface IProps {
     siguienteSeccion: () => void
     seccionAnterior: () => void
@@ -31,7 +33,7 @@ export default function SecDesafios({siguienteSeccion, seccionAnterior} : IProps
     }
 
     return (
-        <section className="seccion tercera">
+        <section className="seccion">
             <p>¿Cuáles son tus principales desafíos para 2024?</p>
 
             <div className="desafio_contenedor">

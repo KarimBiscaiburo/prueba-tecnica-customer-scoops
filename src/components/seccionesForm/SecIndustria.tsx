@@ -19,10 +19,10 @@ export default function SecIndustria({siguienteSeccion, seccionAnterior} : IProp
     }
 
     return (
-        <section className="seccion cuarto">
+        <section className="seccion">
             <p><strong>Ahora te vamos a sorprender...</strong> <br/>¿A cuál industria pertenece tu empresa?</p>
 
-            <div className="crm_contenedor">
+            <div className="contenedor-tarjetas">
                 {
                     industrias.map(industria => (
                         <TarjetaTexto 

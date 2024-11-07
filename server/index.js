@@ -14,7 +14,7 @@ const resend = new Resend(APY_KEY);
 (async function () {
     const { data, error } = await resend.emails.send({
       from: 'Customer Scoops <onboarding@resend.dev>',
-      to: ['kbiscaiburo@gmail.com'],
+      to: ['anthony@customerscoops.com'],
       subject: 'Hola Anthony',
       html: `
         <!DOCTYPE html>

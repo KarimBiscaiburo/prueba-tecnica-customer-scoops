@@ -25,6 +25,7 @@ const ContenedorFlecha = styled.button`
     padding: 8px;
     background-color: transparent;
     cursor: pointer;
+    outline: none
 `
 
 

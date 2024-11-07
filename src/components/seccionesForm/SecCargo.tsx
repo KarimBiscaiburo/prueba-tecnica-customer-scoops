@@ -19,11 +19,11 @@ export default function SecCargo({siguienteSeccion, seccionAnterior, nombre} : I
     }
 
     return (
-        <section className="seccion segunda">
+        <section className="seccion">
             <p><strong>Genial {nombre}, </strong> ahora nos gustaría tener cierta info para diseñar una gran propuesta de valor para ti:</p>
             <p>¿Cuál es tu cargo/posición dentro de tu empresa?</p>
 
-            <div className="cargo_contenedor">
+            <div className="contenedor-tarjetas">
                 {
                     cargos.map(cargo => (
                         <TarjetaTexto 

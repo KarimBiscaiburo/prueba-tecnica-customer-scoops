@@ -47,77 +47,23 @@
     }
 }
 
-.seccion.primera input {
-    border: none;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--color_oscuro-opacidad);
-    color: var(--color_oscuro);
-    outline: none;
-    font-size: 17px;
-    width: 100%;
-    transition: .3s ease all;
-}
-.seccion.primera input:focus {
-    border-bottom: 1px solid var(--color_claro);
-}
-
-
-.cargo_contenedor {
-    display: flex;
-    gap: 4px;
-    flex-wrap: wrap;
-}
-
-
-.desafio_contenedor {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-}
-@media (min-width: 600px) {
-    .desafio_contenedor {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
-.desafio_contenedor button:last-of-type > p {
-    width: 100%;
-    text-align: center;
-    padding-right: 20px;
-}
-
-.crm_contenedor {
+/* Estos estilos afectan a las secciones SecCargo, SecCRM y SecIndustria */
+.contenedor-tarjetas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 5px;
     width: 100%;
 }
-
-/* Último elemento impar*/
-.seccion.cuarto {
-    max-width: 310px;
-}
-.crm_contenedor > button:nth-last-child(1):nth-child(odd) {
+.contenedor-tarjetas > button:nth-last-child(1):nth-child(odd) {
     width: 100%;
 }
-
 @media (min-width: 600px) {
-    .seccion.cuarto {
-        max-width: 100%;
-    }
-    .crm_contenedor {
+    .contenedor-tarjetas {
         justify-content: start;
     }
-    .crm_contenedor > button:nth-last-child(1):nth-child(odd) {
+    .contenedor-tarjetas > button:nth-last-child(1):nth-child(odd) {
         width: 125px;
     }
 }
-
-.seccion.sexta > p strong {
-    font-size: 30px;
-}
-.seccion.sexta p:last-of-type {
-    font-style: italic;
-}
+/* --------------------------------------------------------------------- */
