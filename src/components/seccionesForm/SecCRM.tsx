@@ -25,20 +25,22 @@ export default function SecCRM({siguienteSeccion, seccionAnterior} : IProps) {
     }
 
     return (
-        <section className="seccion">
-            <p>¿Cuál CRM están utilizando en tu empresa?<br/>CRM:</p>
+        <section className="seccion alto-fijo">
+            <div className="alto-fijo-superior">
+                <p>¿Cuál CRM están utilizando en tu empresa?<br/>CRM:</p>
 
-            <div className="contenedor-tarjetas">
-                {
-                    CRMs.map(CRM => (
-                        <TarjetaTexto 
-                            texto={CRM}
-                            key={CRM}
-                            isSeleccionada={crmSeleccionado === CRM}
-                            onClick={() => seleccionarCrm(CRM)}
-                        />
-                    ))
-                }
+                <div className="contenedor-tarjetas">
+                    {
+                        CRMs.map(CRM => (
+                            <TarjetaTexto 
+                                texto={CRM}
+                                key={CRM}
+                                isSeleccionada={crmSeleccionado === CRM}
+                                onClick={() => seleccionarCrm(CRM)}
+                            />
+                        ))
+                    }
+                </div>
             </div>
 
             <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={validarContinuar} funcionAnterior={seccionAnterior}/>

@@ -25,20 +25,22 @@ export default function SecIndustria({siguienteSeccion, seccionAnterior} : IProp
     }
 
     return (
-        <section className="seccion">
-            <p><strong>Ahora te vamos a sorprender...</strong> <br/>¿A cuál industria pertenece tu empresa?</p>
+        <section className="seccion alto-fijo">
+            <div className="alto-fijo-superior">
+                <p><strong>Ahora te vamos a sorprender...</strong> <br/>¿A cuál industria pertenece tu empresa?</p>
 
-            <div className="contenedor-tarjetas">
-                {
-                    industrias.map(industria => (
-                        <TarjetaTexto 
-                            texto={industria}
-                            key={industria}
-                            isSeleccionada={industriaSeleccionada === industria}
-                            onClick={() => seleccionarIndustria(industria)}
-                        />
-                    ))
-                }
+                <div className="contenedor-tarjetas">
+                    {
+                        industrias.map(industria => (
+                            <TarjetaTexto 
+                                texto={industria}
+                                key={industria}
+                                isSeleccionada={industriaSeleccionada === industria}
+                                onClick={() => seleccionarIndustria(industria)}
+                            />
+                        ))
+                    }
+                </div>
             </div>
 
             <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={validarContinuar} funcionAnterior={seccionAnterior}/>

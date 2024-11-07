@@ -25,21 +25,23 @@ export default function SecCargo({siguienteSeccion, seccionAnterior, nombre} : I
     }
 
     return (
-        <section className="seccion">
-            <p><strong>Genial {nombre}, </strong> ahora nos gustaría tener cierta info para diseñar una gran propuesta de valor para ti:</p>
-            <p>¿Cuál es tu cargo/posición dentro de tu empresa?</p>
+        <section className="seccion alto-fijo">
+            <div className="alto-fijo-superior">
+                <p><strong>Genial {nombre}, </strong> ahora nos gustaría tener cierta info para diseñar una gran propuesta de valor para ti:</p>
+                <p>¿Cuál es tu cargo/posición dentro de tu empresa?</p>
 
-            <div className="contenedor-tarjetas">
-                {
-                    cargos.map(cargo => (
-                        <TarjetaTexto 
-                            texto={cargo}
-                            key={cargo}
-                            isSeleccionada={cargoSeleccionado === cargo}
-                            onClick={() => seleccionarCargo(cargo)}
-                        />
-                    ))
-                }
+                <div className="contenedor-tarjetas">
+                    {
+                        cargos.map(cargo => (
+                            <TarjetaTexto 
+                                texto={cargo}
+                                key={cargo}
+                                isSeleccionada={cargoSeleccionado === cargo}
+                                onClick={() => seleccionarCargo(cargo)}
+                            />
+                        ))
+                    }
+                </div>
             </div>
 
             <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={validarContinuar} funcionAnterior={seccionAnterior}/>

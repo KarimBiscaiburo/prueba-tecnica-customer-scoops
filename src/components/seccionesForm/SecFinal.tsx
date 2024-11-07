@@ -4,7 +4,7 @@ export default function SecFinal() {
 
     return (
         <section className="seccion">
-            <p><strong style={{fontSize: "30px"}}>Muchas Gracias</strong><br />por querer ser parte 
+            <p style={{fontSize: "30px"}}><strong>Muchas Gracias</strong><br />por querer ser parte 
             de la familia Scoopers.</p>
 
             <p style={{fontStyle: "italic"}}>Nos vemos pronto!</p>

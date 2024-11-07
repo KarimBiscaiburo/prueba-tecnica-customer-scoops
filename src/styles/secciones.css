@@ -19,7 +19,7 @@
     display: flex;
     gap: 150px;
 }
-.seccion {
+.seccion, .seccion .alto-fijo-superior {
     min-width: 305px;
     display: flex;
     flex-direction: column;
@@ -29,6 +29,12 @@
 .seccion > p {
     font-size: 19px;
 }
+.seccion.alto-fijo {
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 @media (min-width: 600px) {
     .contenido {
         width: 450px;
@@ -37,8 +43,12 @@
     .seccion {
         min-width: 400px;
     }
+    .seccion.alto-fijo {
+        height: 300px;
+    }
     .secciones_contenedor {
         width: 400px;
+        height: 350px;
     }
 }
 @media (min-width: 1150px) {

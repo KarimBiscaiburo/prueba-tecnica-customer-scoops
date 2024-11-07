@@ -39,21 +39,23 @@ export default function SecDesafios({siguienteSeccion, seccionAnterior} : IProps
     }
 
     return (
-        <section className="seccion">
-            <p>¿Cuáles son tus principales desafíos para 2024?</p>
+        <section className="seccion alto-fijo">
+            <div className="alto-fijo-superior">
+                <p>¿Cuáles son tus principales desafíos para 2024?</p>
 
-            <div className="desafio_contenedor">
-                {
-                    desafios.map(desafio => (
-                        <DesafiosCard 
-                            key={desafio.opcion}
-                            opcion={desafio.opcion}
-                            texto={desafio.texto} 
-                            isSeleccionada={desafioSeleccionado === desafio.opcion}
-                            onClick={() => seleccionarDesafio(desafio.opcion)}
-                        />
-                    ))
-                }
+                <div className="desafio_contenedor">
+                    {
+                        desafios.map(desafio => (
+                            <DesafiosCard 
+                                key={desafio.opcion}
+                                opcion={desafio.opcion}
+                                texto={desafio.texto} 
+                                isSeleccionada={desafioSeleccionado === desafio.opcion}
+                                onClick={() => seleccionarDesafio(desafio.opcion)}
+                            />
+                        ))
+                    }
+                </div>
             </div>
 
             <BotonSiguienteAnterior texto="Siguiente" funcionSiguiente={validarContinuar} funcionAnterior={seccionAnterior}/>
