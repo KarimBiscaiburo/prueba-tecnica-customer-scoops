@@ -34,7 +34,7 @@ body {
   body.activar-fondo {
     background: var(--background_gradient);
   }
-  body.activar-fondo .portada-contenedor {
+  body.activar-fondo .portada {
     background: transparent;
   }
 }

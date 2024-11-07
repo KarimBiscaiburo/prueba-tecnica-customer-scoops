@@ -1,4 +1,5 @@
 .contenido {
+    position: relative;
     margin: 54px 35px;
     display: flex;
     flex-direction: column;
@@ -8,12 +9,13 @@
     width: 305px;
 }
 .contenido__logo {
+    position: fixed;
     display: none;
     width: 113px;
-    margin: 54px 0;
+    transform: translateY(-80px);
 }
 .contenido__secciones {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     width: 305px;
     margin: 0 auto;
     display: flex;
