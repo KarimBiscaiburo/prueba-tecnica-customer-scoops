@@ -26,6 +26,10 @@ Metodología BEM.
 
 </br>
 
+Respecto a la imágen de la portada. Haciendolo más alto queda con muy poca calidad, por lo que preferí priorizar la estética antes que el diseño del Figma. 
+
+</br>
+
 Algunos pequeños componentes poseen estilos agregados directamente en el componente o son "styled components". De esta manera se evita crear archivos con muy pocas líneas de código CSS.
 
 >[!NOTE]
