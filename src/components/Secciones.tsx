@@ -10,13 +10,12 @@ import SecIndustria from "./seccionesForm/SecIndustria"
 import SecFinal from "./seccionesForm/SecFinal"
 
 interface IProps {
-    fase: number
-    cambiarFase: (fase: number) => void
+    cambiarFase: React.Dispatch<React.SetStateAction<number>>
 }
 
 let currentIndex = 0;
 
-export default function Secciones({fase, cambiarFase}: IProps) {
+export default function Secciones({cambiarFase}: IProps) {
     const [nombre, setNombre] = useState<string>("Desconocido");
     const [secciones, setSecciones] = useState<NodeListOf<HTMLElement> | null>(null);
 
@@ -32,7 +31,7 @@ export default function Secciones({fase, cambiarFase}: IProps) {
         if (currentIndex < secciones.length - 1) {
             currentIndex++;
             secciones[currentIndex].scrollIntoView({ behavior: "smooth", inline: "end" });
-            cambiarFase(fase + 1);
+            cambiarFase(prevState => prevState + 1);
         }
     }
 
@@ -43,7 +42,7 @@ export default function Secciones({fase, cambiarFase}: IProps) {
         if (currentIndex > 0) {
             currentIndex--;
             secciones[currentIndex].scrollIntoView({ behavior: "smooth", inline: "end" });
-            cambiarFase(fase - 1);
+            cambiarFase(prevState => prevState - 1);
         }
     }
 
@@ -60,7 +59,7 @@ export default function Secciones({fase, cambiarFase}: IProps) {
         if (currentIndex < secciones.length - 1) {
             currentIndex++;
             secciones[currentIndex].scrollIntoView({ behavior: "smooth", inline: "end" });
-            cambiarFase(fase + 1);
+            cambiarFase(prevState => prevState + 1);
         }
 
         // Agregar clase al body

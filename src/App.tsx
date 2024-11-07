@@ -17,7 +17,7 @@ function App() {
 
       <div className='contenedor_pagina'>
         <Portada fase={fase}/>
-        <Secciones fase={fase} cambiarFase={setFase} />
+        <Secciones cambiarFase={setFase} />
       </div>
     </>
     
