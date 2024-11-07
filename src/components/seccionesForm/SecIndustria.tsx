@@ -25,11 +25,11 @@ export default function SecIndustria({siguienteSeccion, seccionAnterior} : IProp
     }
 
     return (
-        <section className="seccion alto-fijo">
+        <section className="secciones__seccion secciones__seccion-alto-fijo">
             <div className="alto-fijo-superior">
                 <p><strong>Ahora te vamos a sorprender...</strong> <br/>¿A cuál industria pertenece tu empresa?</p>
 
-                <div className="contenedor-tarjetas">
+                <div className="secciones__seccion__tarjetas">
                     {
                         industrias.map(industria => (
                             <TarjetaTexto 

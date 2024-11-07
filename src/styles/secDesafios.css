@@ -1,16 +1,16 @@
-.desafio_contenedor {
+.secciones__seccion__desafio {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 100%;
 }
 @media (min-width: 600px) {
-    .desafio_contenedor {
+    .secciones__seccion__desafio {
         flex-direction: row;
         flex-wrap: wrap;
     }
 }
-.desafio_contenedor button:last-of-type > p {
+.secciones__seccion__desafio button:last-of-type > p {
     width: 100%;
     text-align: center;
     padding-right: 20px;

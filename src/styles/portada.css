@@ -1,4 +1,4 @@
-.portada-contenedor {
+.portada {
     background: var(--background_gradient);
     margin-left: 10px;
     border-radius: 200px 0 0 200px;
@@ -7,7 +7,7 @@
 }
 
 /* Estilos del marcador de la fase */
-.portada-etapa {
+.portada__etapa {
     position: absolute;
     top: 15px;
     right: 20px;
@@ -15,19 +15,19 @@
     gap: 6px;
     z-index: 50;
 }
-.portada-etapa p {
+.portada__etapa p {
     color: var(--color_oscuro);
 }
-.portada-etapa p:first-of-type {
+.portada__etapa p:first-of-type {
     font-weight: 600;
     font-size: 18px;
 }
-.portada-etapa p:last-of-type {
+.portada__etapa p:last-of-type {
     font-weight: 400;
     font-size: 10px;
     margin-top: 4.5px;
 }
-.portada-etapa span {
+.portada__etapa span {
     display: block;
     width: 1px;
     background-color: var(--color_oscuro);
@@ -36,20 +36,20 @@
 }
 /* Fin estilos del marcador de la fase */
 
-.portada-imagenes_container {
+.portada__imagenes {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
 /* Estilos logo */
-.portada-logo_container {
+.portada__imagenes--logo {
     height: 100%;
     display: flex;
     align-items: center;
     margin-left: 40px;
 }
-.portada-logo_container img {
+.portada__imagenes--logo img {
     width: 100px;
     height: 36px;
     object-fit: contain;
@@ -57,27 +57,25 @@
 /* Fin estilos logo */
 
 /* Estilos persona portada */
-.portada-persona {
+.portada__imagenes--persona {
     position: relative;
     display: flex;
     justify-content: end;
     padding-top: 30px;
     padding-right: 26px;
 }
-.portada-persona_container {
+.portada__imagenes__container {
     width: 161px;
     height: 183px;
     display: flex;
     justify-content: center;
 }
-.portada-persona_persona {
-    /* height: 183px;
-    width: 127px; */
+.portada__imagenes__container--persona {
     object-fit: cover;
     object-position: top;
     z-index: 20;
 }
-.portada-persona_fondo {
+.portada__imagenes__container--fondo {
     width: 100%;
     position: absolute;
     top: 13px;
@@ -87,50 +85,50 @@
 /* Fin estilos persona portada */
 
 @media (min-width: 600px) {
-    .portada-contenedor { height: 253px; }
-    .portada-logo_container img {
+    .portada { height: 253px; }
+    .portada__imagenes--logo img {
         width: 150px;
         height: 86px;
     }
-    .portada-persona_container {
+    .portada__imagenes__container {
         height: 223px;
         width: 201px;
     }
 }
 @media (min-width: 850px) {
-    .portada-contenedor { height: 283px; }
-    .portada-logo_container img {
+    .portada { height: 283px; }
+    .portada__imagenes--logo img {
         width: 180px;
         height: 126px;
     }
-    .portada-persona_container {
+    .portada__imagenes__container {
         height: 253px;
         width: 231px;
     }
 }
 @media (min-width: 1150px) {
-    .portada-contenedor { 
+    .portada { 
         grid-area: segunda;
         width: 100%;
         height: 100%;
         margin-left: auto;
     }
-    .portada-etapa {
+    .portada__etapa {
         top: 75px;
         right: 40px;
     }
-    .portada-imagenes_container {
+    .portada__imagenes {
         display: flex;
         justify-content: center;
         align-items: end;
     }
-    .portada-logo_container {
+    .portada__imagenes--logo {
         display: none;
     }
-    .portada-persona {
+    .portada__imagenes--persona {
         display: block;
     }
-    .portada-persona_container {
+    .portada__imagenes__container {
         display: flex;
         align-items: end;
         margin-top: auto;

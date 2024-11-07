@@ -13,3 +13,5 @@ en cuanto a las medidas de los elementos, me base directamente con las definidas
 se usaron los estilos con archivos .css y style components porque es mas facil en componentes pequeños y no es necesario crear archivos adicionales
 
 algunas secciones que necesitan pequeños estilos son agregados directamente en el componente, asi evitas crear archivos por pocas lineas de código
+
+estilos css bajo metodologia BEM

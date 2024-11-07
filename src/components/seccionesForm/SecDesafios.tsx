@@ -39,11 +39,11 @@ export default function SecDesafios({siguienteSeccion, seccionAnterior} : IProps
     }
 
     return (
-        <section className="seccion alto-fijo">
+        <section className="secciones__seccion secciones__seccion-alto-fijo">
             <div className="alto-fijo-superior">
                 <p>¿Cuáles son tus principales desafíos para 2024?</p>
 
-                <div className="desafio_contenedor">
+                <div className="secciones__seccion__desafio">
                     {
                         desafios.map(desafio => (
                             <DesafiosCard 

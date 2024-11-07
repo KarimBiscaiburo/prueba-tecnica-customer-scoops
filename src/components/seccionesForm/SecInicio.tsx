@@ -25,7 +25,7 @@ export default function SecInicio({siguienteSeccion, guardarNombre} : IProps) {
     }
 
     return (
-        <section className="seccion primera">
+        <section className="secciones__seccion">
             <p>Muchas gracias por tu interés en conocer <strong>customerScoops</strong>, que a través de Formularios Conversacionales Inteligente te ayudamos a aumentar el revenue y rentabilidad de tu negocio.</p>
             <p>Queremos conocerte, ¿cuál es tu nombre?</p>
 

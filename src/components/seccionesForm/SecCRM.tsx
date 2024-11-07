@@ -25,11 +25,11 @@ export default function SecCRM({siguienteSeccion, seccionAnterior} : IProps) {
     }
 
     return (
-        <section className="seccion alto-fijo">
+        <section className="secciones__seccion secciones__seccion-alto-fijo">
             <div className="alto-fijo-superior">
                 <p>¿Cuál CRM están utilizando en tu empresa?<br/>CRM:</p>
 
-                <div className="contenedor-tarjetas">
+                <div className="secciones__seccion__tarjetas">
                     {
                         CRMs.map(CRM => (
                             <TarjetaTexto 

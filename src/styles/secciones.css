@@ -7,29 +7,29 @@
     align-items: end;
     width: 305px;
 }
-.contenido-logo {
+.contenido__logo {
     display: none;
     width: 113px;
     margin: 54px 0;
 }
-.secciones_contenedor {
+.contenido__secciones {
     scroll-behavior: smooth;
     width: 305px;
     margin: 0 auto;
     display: flex;
     gap: 150px;
 }
-.seccion, .seccion .alto-fijo-superior {
+.secciones__seccion, .secciones__seccion .alto-fijo-superior {
     min-width: 305px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 24px;
 }
-.seccion > p {
+.secciones__seccion > p {
     font-size: 19px;
 }
-.seccion.alto-fijo {
+.secciones__seccion.secciones__seccion-alto-fijo {
     height: 440px;
     display: flex;
     flex-direction: column;
@@ -40,39 +40,39 @@
         width: 450px;
         margin: 54px auto;
     }
-    .seccion {
+    .secciones__seccion {
         min-width: 400px;
     }
-    .seccion.alto-fijo {
+    .secciones__seccion.secciones__seccion-alto-fijo {
         height: 300px;
     }
-    .secciones_contenedor {
+    .contenido__secciones {
         width: 400px;
         height: 350px;
     }
 }
 @media (min-width: 1150px) {
-    .contenido-logo {
+    .contenido__logo {
         display: block;
     }
 }
 
 /* Estos estilos afectan a las secciones SecCargo, SecCRM y SecIndustria */
-.contenedor-tarjetas {
+.secciones__seccion__tarjetas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 5px;
     width: 100%;
 }
-.contenedor-tarjetas > button:nth-last-child(1):nth-child(odd) {
+.secciones__seccion__tarjetas > button:nth-last-child(1):nth-child(odd) {
     width: 100%;
 }
 @media (min-width: 600px) {
-    .contenedor-tarjetas {
+    .secciones__seccion__tarjetas {
         justify-content: start;
     }
-    .contenedor-tarjetas > button:nth-last-child(1):nth-child(odd) {
+    .secciones__seccion__tarjetas > button:nth-last-child(1):nth-child(odd) {
         width: 125px;
     }
 }

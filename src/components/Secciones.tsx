@@ -21,7 +21,7 @@ export default function Secciones({fase, cambiarFase}: IProps) {
     const [secciones, setSecciones] = useState<NodeListOf<HTMLElement> | null>(null);
 
     useEffect(() => {
-        const elementos = document.querySelectorAll<HTMLElement>(".seccion");
+        const elementos = document.querySelectorAll<HTMLElement>(".secciones__seccion");
         setSecciones(elementos);
     }, []);
 
@@ -72,9 +72,9 @@ export default function Secciones({fase, cambiarFase}: IProps) {
     return (
         <div className="contenido">
             <div>
-                <img src="./logo.webp" alt="logo customer scoops" className="contenido-logo"/>
+                <img src="./logo.webp" alt="logo customer scoops" className="contenido__logo"/>
 
-                <main className="secciones_contenedor">
+                <main className="contenido__secciones">
 
                     <SecInicio siguienteSeccion={siguienteSeccion} guardarNombre={guardarNombre}/>
 
